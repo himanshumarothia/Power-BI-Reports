@@ -1,1 +1,0 @@
-https://services.odata.org/Northwind/Northwind.svc/
