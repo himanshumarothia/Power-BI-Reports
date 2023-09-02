@@ -1,0 +1,10 @@
+%TotalCallsAnswered = DIVIDE([CallsAnswered],COUNT('Call Center Data'[Call Id]))
+
+CallsAnswered = CALCULATE(COUNT('Call Center Data'[Answered (Y/N)]),'Call Center Data'[Answered (Y/N)]="Y")
+
+CallsMissed = CALCULATE(COUNT('Call Center Data'[Answered (Y/N)]),'Call Center Data'[Answered (Y/N)]="N")
+
+IssueResolved = CALCULATE(COUNT('Call Center Data'[Resolved]),'Call Center Data'[Resolved]="Y")
+
+Time.Hour([AvgTalkDuration])*3600+Time.Minute([AvgTalkDuration])*60+Time.Second([AvgTalkDuration])
+
